@@ -1,6 +1,9 @@
 /* 
- * Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+ * Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
 */
+
+/** ********** Import Colors ********** **/
+@import "./colors.css";
 
 /** ********** Fonts ********** **/
 * {
@@ -10,9 +13,9 @@
 
 /** ********** Waybar Window ********** **/
 window#waybar {
-    background-color: #1e1e2e;
-	color: #1e1e2e;
-    border-bottom: 2px solid #313244;
+    background-color: @background;
+	color: @background;
+    border-bottom: 2px solid @background-alt;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -23,12 +26,12 @@ window#waybar.hidden {
 
 /** ********** Backlight ********** **/
 #backlight {
-	background-color: #cba6f7;
+	background-color: @magenta;
 }
 
 /** ********** Battery ********** **/
 #battery {
-	background-color: #f9e2af;
+	background-color: @yellow;
 }
 
 #battery.charging {
@@ -39,13 +42,13 @@ window#waybar.hidden {
 
 @keyframes blink {
     to {
-        color: #000000;
+        color: @black;
     }
 }
 
 #battery.critical:not(.charging) {
-	background-color: #f38ba8;
-    color: #f38ba8;
+	background-color: @red;
+    color: @red;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -55,35 +58,35 @@ window#waybar.hidden {
 
 /** ********** Clock ********** **/
 #clock {
-	background-color: #a6e3a1;
+	background-color: @green;
 }
 
 /** ********** CPU ********** **/
 #cpu {
-	background-color: #89dceb;
+	background-color: @cyan;
 }
 
 /** ********** Memory ********** **/
 #memory {
-	background-color: #eba0ac;
+	background-color: @yellow;
 }
 
 /** ********** Disk ********** **/
 #disk {
-	background-color: #b4befe;
+	background-color: @green;
 }
 
 /** ***** Idle Inhibitor ***** **/
 #idle_inhibitor {
-	background-color: #ABE9B3;
+	background-color: @green;
 }
 #idle_inhibitor.deactivated {
-	background-color: #F28FAD;
+	background-color: @red;
 }
 
 /** ********** Tray ********** **/
 #tray {
-	background-color: #3C3C44;
+	background-color: @background-alt;
 }
 #tray > .passive {
     -gtk-icon-effect: dim;
@@ -95,52 +98,114 @@ window#waybar.hidden {
 }
 
 /** ********** MPD ********** **/
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 #mpd {
-	background-color: #94e2d5;
+	background-color: @background-alt;
+	color: @foreground;
 }
 
 #mpd.disconnected {
-	background-color: #f38ba8;
+	background-color: @red;
+	color: @background;
 }
 
 #mpd.stopped {
-	background-color: #f5c2e7;
+	background-color: @magenta;
+	color: @background;
 }
 
 #mpd.playing {
-	background-color: #74c7ec;
+    background: linear-gradient(90deg, @magenta 25%, @red 50%, @yellow 75%, @cyan 100%); 
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
+    color: @background;
 }
 
 #mpd.paused {
 }
 
+/** ********** Spotify ********** **/
+#custom-spotify {
+	background-color: @background-alt;
+	color: @foreground;
+}
+
+#custom-spotify.paused {
+	background-color: @background-alt;
+	color: @foreground;
+}
+
+#custom-spotify.playing {
+    background: linear-gradient(90deg, @magenta 25%, @red 50%, @yellow 75%, @cyan 100%); 
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
+    color: @background;
+}
+
+#custom-spotify.offline {
+	background-color: @red;
+	color: @background;
+}
+
 /** ********** Pulseaudio ********** **/
 #pulseaudio {
-	background-color: #fab387;
+	background-color: @cyan;
 }
 
 #pulseaudio.bluetooth {
-	background-color: #f5c2e7;
+	background-color: @blue;
 }
 #pulseaudio.muted {
-	background-color: #313244;
-	color: #cdd6f4;
+	background-color: @red;
+	color: @background;
 }
 
 /** ********** Network ********** **/
 #network {
-	background-color: #89b4fa;
+	background-color: @blue;
 }
 
 #network.disconnected,#network.disabled {
-	background-color: #313244;
-	color: #cdd6f4;
+	background-color: @background-alt;
+	color: @foreground;
 }
 #network.linked {
 }
 #network.ethernet {
 }
 #network.wifi {
+}
+
+/** ********** WLR Desktop ********** **/
+#workspaces {
+	background-color: @background-alt;
+	border-radius: 4px;
+	margin: 6px 0px;
+	padding: 0px 0px;
+}
+#workspaces button{
+	color: @foreground;
+}
+#workspaces button.active{
+	background-color: @magenta;
+	color: @background;
+}
+#workspaces button.urgent{
+	color: @red;
+}
+#workspaces button.hidden{
+	color: @yellow;
 }
 
 /** ********** Custom ********** **/
@@ -151,14 +216,14 @@ window#waybar.hidden {
 }
 
 #custom-menu {
-	background-color: #f5c2e7;
+	background-color: @magenta;
 	margin-left: 6px;
 	padding: 2px 6px;
 	font-size: 16px;
 }
 
 #custom-power {
-	background-color: #f38ba8;
+	background-color: @red;
 	margin-right: 6px;
 	padding: 2px 8px;
 	font-size: 16px;
@@ -173,6 +238,7 @@ window#waybar.hidden {
 #mode,
 #memory,
 #mpd,
+#custom-spotify,
 #idle_inhibitor,
 #tray,
 #pulseaudio,

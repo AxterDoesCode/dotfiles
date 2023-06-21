@@ -1,6 +1,23 @@
 /* 
- * Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+ * Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
 */
+
+/* 
+ * Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+*/
+
+/** ********** Colors ********** **/
+@define-color background 	  #1E1E2E;
+@define-color background-alt  #2E2E3E;
+@define-color foreground 	  #d9e0ee;
+@define-color black 	 	  #000000;
+@define-color red 	 		  #F28FAD;
+@define-color green 	 	  #ABE9B3;
+@define-color yellow 	 	  #FAE3B0;
+@define-color blue 	 		  #96CDFB;
+@define-color magenta 	 	  #F5C2E7;
+@define-color cyan 	 		  #89DCEB;
+@define-color white 	 	  #FFFFFF;
 
 /** ********** Fonts ********** **/
 * {
@@ -9,9 +26,9 @@
 }
 
 #window {
-	background-color: --wofi-color0;
-	color: --wofi-color2;
-	border: 2px solid --wofi-color1;
+	background-color: @background;
+	color: @foreground;
+	border: 0px solid @background-alt;
 	border-radius: 0px;
 }
 
@@ -20,9 +37,9 @@
 }
 
 #input {
-	background-color: --wofi-color1;
-	border: 0px solid --wofi-color3;
-	padding: 8px 12px;
+	background-color: @background-alt;
+	border: 0px solid @blue;
+	padding: 1px 10px;
 }
 
 #scroll {
@@ -37,11 +54,11 @@
 }
 
 #text {
-	color: --wofi-color2;
+	color: @foreground;
 }
 
 #text:selected {
-	color: --wofi-color0;
+	color: @background;
 }
 
 #entry {
@@ -49,8 +66,8 @@
 }
 
 #entry:selected {
-	background-color: --wofi-color3;
-	color: --wofi-color0;
+	background-color: @blue;
+	color: @background;
 }
 
 #unselected {

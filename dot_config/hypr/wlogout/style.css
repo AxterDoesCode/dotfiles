@@ -1,6 +1,9 @@
 /* 
- * Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+ * Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
 */
+
+/** ********** Import Colors ********** **/
+@import "./colors.css";
 
 /** ********** Fonts ********** **/
 * {
@@ -11,14 +14,14 @@
 
 /** ********** Main Window ********** **/
 window {
-	background-color: #1E1E2E;
+	background-color: @background;
 }
 
 /** ********** Buttons ********** **/
 button {
-	background-color: #242434;
-    color: #FFFFFF;
-	border: 2px solid #282838;
+	background-color: @background-alt1;
+    color: @foreground;
+	border: 2px solid @background-alt2;
 	border-radius: 20px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -26,7 +29,9 @@ button {
 }
 
 button:focus, button:active, button:hover {
-	background-color: #89B4FA;
+	background-color: @blue;
+    color: @background;
+	border: 0px solid @blue;
 	outline-style: none;
 }
 

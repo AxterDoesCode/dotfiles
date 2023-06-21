@@ -1,4 +1,4 @@
-// Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+// Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
 //
 // Waybar config file
 {
@@ -6,7 +6,7 @@
     "name": "main-bar", 
     "id": "main-bar", 	
     "layer": "top", 	
-    "mode": "dock", 	
+    //"mode": "dock", 	
     "exclusive": true, 	
     "passthrough": false, 
     "position": "top", 	
@@ -22,6 +22,7 @@
     "ipc": true, 		
  
     "modules-left": ["custom/menu", "cpu", "memory", "disk"],
-    "modules-center": ["idle_inhibitor", "mpd", "tray"],
+    "modules-center": ["idle_inhibitor", "wlr/workspaces", "mpd", "tray"],
+    //"modules-center": ["idle_inhibitor", "wlr/workspaces", "custom/spotify", "tray"],
     "modules-right": ["pulseaudio", "backlight", "network", "battery", "clock", "custom/power"],
 }
