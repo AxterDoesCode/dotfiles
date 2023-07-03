@@ -28,7 +28,7 @@ https://discovery.endeavouros.com/window-tiling-managers/i3-wm/
 
 # Lock the system
 # lock with a picture or blurring the screen (options in config)
-+l
++L
 
 # reload the configuration file
 +Shift+c
@@ -55,10 +55,10 @@ F1
 +Right focus right
 
 # move a focused window
-+Shift+j move left
-+Shift+k move down
-+Shift+b move up
-+Shift+o move right
++Shift+h move left
++Shift+j move down
++Shift+k move up
++Shift+l move right
 
 # alternatively, you can use the cursor keys:
 +Shift+Left move left
@@ -67,7 +67,7 @@ F1
 +Shift+Right move right
 
 # split in horizontal orientation
-+h split h
++h split z
 
 # split in vertical orientation
 +v split v
