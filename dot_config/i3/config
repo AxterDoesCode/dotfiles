@@ -324,14 +324,14 @@ assign [class="kitty"] $ws1
 assign [class="(?i)brave"] $ws2
 assign [class="Thunar"] $ws3
 assign [class="thunderbird"] $ws4
-assign [class="TelegramDesktop"] $ws5
+assign [class="discord"] $ws5
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=kitty] focus
 for_window [class=(?i)brave] focus
 for_window [class=Thunar] focus
 for_window [class=Thunderbird] focus
-for_window [class=TelegramDesktop] focus
+for_window [class=discord] focus
 
 ##############
 # compositor #
