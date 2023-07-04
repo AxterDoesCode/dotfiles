@@ -20,7 +20,7 @@ M.general = {
     ["<leader>y"] = {"\"+y", "Yank to system clipboard`"},
     ["<leader>Y"] = {"\"+Y", "Yank line to system clipboard"},
     ["<leader>d"] = {"\"_d", "Delete to void register"},
-    ["<C-c>"] = {"<Esc>", "Overwriting NVChad Ctrl+c to copy whole file"}
+    ["<C-c>"] = {"<Esc>", "Overwriting NVChad Ctrl+c to copy whole file"},
   },
 
   x = {
@@ -29,8 +29,8 @@ M.general = {
 
   v = {
     ["J"] = {":m '>+1<CR>gv=gv", "Move highlighted text down"},
-    ["K"] = {":m '<-2<CR>gv=gv", "Move highlighted text up"},
     ["<leader>y"] = {"\"+y", "Yank to system clipboard"},
+    ["K"] = {":m '<-2<CR>gv=gv", "Move highlighted text up"},
     ["<leader>d"] = {"\"_d", "Delete to void register"}
   },
 

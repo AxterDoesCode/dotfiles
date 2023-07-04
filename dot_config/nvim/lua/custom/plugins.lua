@@ -57,5 +57,9 @@ local plugins = {
       vim.cmd [[silent! GoInstallDeps]]
     end,
   },
+  {
+    'kevinhwang91/nvim-bqf', 
+    ft = 'qf',
+  }
 }
 return plugins
