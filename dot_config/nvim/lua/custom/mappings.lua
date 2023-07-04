@@ -1,19 +1,41 @@
 local M = {}
+-- Bad things happen when you use Q
+M.disabled = {
+  n = {
+      ["Q"] = ""
+  }
+}
 
 M.general = {
   n = {
-    ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left"},
-    ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right"},
-    ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down"},
-    ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up"},
-    ["<C-d>"] = { "<C-d>zz"},
-    ["<C-u>"] = { "<C-u>zz"},
+    ["<C-h>"] = {"<cmd> TmuxNavigateLeft<CR>", "window left"},
+    ["<C-l>"] = {"<cmd> TmuxNavigateRight<CR>", "window right"},
+    ["<C-j>"] = {"<cmd> TmuxNavigateDown<CR>", "window down"},
+    ["<C-k>"] = {"<cmd> TmuxNavigateUp<CR>", "window up"},
+    ["<C-d>"] = {"<C-d>zz"},
+    ["<C-u>"] = {"<C-u>zz"},
     ["n"] = {"nzzzv"},
-    ["N"] = {"Nzzzv"}
+    ["N"] = {"Nzzzv"},
+    ["J"] = {"mzJ`z"},
+    ["<leader>y"] = {"\"+y", "Yank to system clipboard`"},
+    ["<leader>Y"] = {"\"+Y", "Yank line to system clipboard"},
+    ["<leader>d"] = {"\"_d", "Delete to void register"},
+    ["<C-c>"] = {"<Esc>", "Overwriting NVChad Ctrl+c to copy whole file"}
   },
 
   x = {
     ["<leader>p"] = {"\"_dP", "Paste without removing buffer"}
+  },
+
+  v = {
+    ["J"] = {":m '>+1<CR>gv=gv", "Move highlighted text down"},
+    ["K"] = {":m '<-2<CR>gv=gv", "Move highlighted text up"},
+    ["<leader>y"] = {"\"+y", "Yank to system clipboard"},
+    ["<leader>d"] = {"\"_d", "Delete to void register"}
+  },
+
+  i = {
+    ["<C-c>"] = {"<Esc>"}
   }
 }
 
