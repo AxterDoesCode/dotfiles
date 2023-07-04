@@ -5,7 +5,8 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Path to GOPATH
 export PATH=$PATH:$(go env GOPATH)/bin
-
+# Rust binaries Path
+export PATH="$HOME/.cargo/bin:$PATH"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
