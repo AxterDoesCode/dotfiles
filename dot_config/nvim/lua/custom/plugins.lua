@@ -12,7 +12,8 @@ local plugins = {
         "gopls",
         "golines",
         "goimports-reviser",
-        "gofumpt"
+        "gofumpt",
+        "lua-language-server"
       },
     },
   },
