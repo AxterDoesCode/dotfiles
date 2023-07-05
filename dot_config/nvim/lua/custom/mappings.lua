@@ -21,6 +21,7 @@ M.general = {
     ["<leader>Y"] = {"\"+Y", "Yank line to system clipboard"},
     ["<leader>d"] = {"\"_d", "Delete to void register"},
     ["<C-c>"] = {"<Esc>", "Overwriting NVChad Ctrl+c to copy whole file"},
+    ["<leader>zz"] = {"<cmd> ZenMode<CR>", "Toggle Zen Mode"},
   },
 
   x = {
