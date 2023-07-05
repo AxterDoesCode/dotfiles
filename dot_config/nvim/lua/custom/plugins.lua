@@ -6,6 +6,10 @@ local plugins = {
     lazy = false,
   },
   {
+    "neomake/neomake",
+    lazy = false,
+  },
+  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
@@ -59,7 +63,7 @@ local plugins = {
   },
   {
     'kevinhwang91/nvim-bqf',
-    ft = 'qf',
+      ft = 'qf',
   },
   {
     'nvim-treesitter/nvim-treesitter-context',
@@ -76,6 +80,55 @@ local plugins = {
       separator = nil,
       zindex = 20, -- The Z-index of the context window
       on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
+  },
+  {
+    'tpope/vim-unimpaired',
+    lazy = false
+  },
+  {
+    'tpope/vim-surround',
+    lazy = false
+  },
+  {
+    'junegunn/fzf.vim',
+    lazy = false
+  },
+  {
+    'junegunn/fzf',
+    lazy = false
+  },
+  {
+   "folke/trouble.nvim",
+   dependencies = { "nvim-tree/nvim-web-devicons" },
+   opts = {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+   },
+  },
+  {
+    'tpope/vim-fugitive',
+    lazy = false
+  },
+  {
+    'folke/zen-mode.nvim',
+    lazy = false,
+    opts = {
+      plugins = {
+        tmux = { enabled = true }, -- disables the tmux statusline
+        -- this will change the font size on kitty when in zen mode
+        -- to make this work, you need to set the following kitty options:
+        -- - allow_remote_control socket-only
+        -- - listen_on unix:/tmp/kitty
+        kitty = {
+          enabled = false,
+          font = "+4", -- font size increment
+        },
+      }
+    }
+  },
+  {
+    'folke/twilight.nvim'
   }
 }
 return plugins
