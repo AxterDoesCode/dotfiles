@@ -121,10 +121,7 @@ local plugins = {
         -- - allow_remote_control socket-only
         -- - listen_on unix:/tmp/kitty
         kitty = {
-<<<<<<< HEAD
           enabled = true,
-=======
->>>>>>> refs/remotes/origin/main
           font = "+4", -- font size increment
         },
       }
