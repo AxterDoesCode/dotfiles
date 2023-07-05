@@ -127,8 +127,5 @@ local plugins = {
       }
     }
   },
-  {
-    'folke/twilight.nvim'
-  }
 }
 return plugins
