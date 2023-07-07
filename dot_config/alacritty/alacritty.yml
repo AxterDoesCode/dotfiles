@@ -21,7 +21,8 @@ import:
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
   #TERM: alacritty
-
+env:
+  TERM: xterm-256color
 #window:
   # Window dimensions (changes require restart)
   #
