@@ -4,7 +4,7 @@
 	bare = false
 	logallrefupdates = true
 [remote "origin"]
-	url = git@github.com:AxterDoesCode/nvim-axtr.git
+	url = https://github.com/AxterDoesCode/nvim-axtr.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
 	remote = origin
