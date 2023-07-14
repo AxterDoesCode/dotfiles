@@ -48,7 +48,7 @@ return{
         keys = {
             { "<leader>pf", "<cmd>Telescope find_files<cr>", desc = "Find files" },
             { "<C-p>", "<cmd>Telescope git_files<cr>", desc = "Git files" },
-            { "<leader>ps",function() require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") }) end, desc = "Git files" },
+            { "<leader>ps",function() require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") }) end, desc = "Grep string" },
             { "<leader>vh", "<cmd>Telescope help_tags<cr>", desc = "Vim help tags" },
         }
     },
@@ -157,6 +157,10 @@ return{
     {
         "lambdalisue/suda.vim",
         cmd = {"SudaWrite", "SudaRead"},
+    },
+    {
+        'eandrju/cellular-automaton.nvim',
+        cmd = {"CellularAutomaton"},
     },
 }
 
