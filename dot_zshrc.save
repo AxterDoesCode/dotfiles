@@ -111,4 +111,5 @@ export TERM=xterm-256color
 export PATH="$PATH:$HOME/.local/bin"
 # Add keychain for easy ssh usage
 eval $(keychain --eval --quiet --noask id_ed25519)
+export EDITOR = "nvim"
 
