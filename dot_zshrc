@@ -109,3 +109,5 @@ export TERM=xterm-256color
 
 # Created by `pipx` on 2023-07-07 16:00:36
 export PATH="$PATH:$HOME/.local/bin"
+
+eval $(keychain --eval --quiet --noask id_ed25519)
