@@ -110,5 +110,5 @@ export TERM=xterm-256color
 # Created by `pipx` on 2023-07-07 16:00:36
 export PATH="$PATH:$HOME/.local/bin"
 # Add keychain for easy ssh usage
-eval $(keychain --eval --quiet id_ed25519)
+eval $(keychain --eval --quiet)
 
