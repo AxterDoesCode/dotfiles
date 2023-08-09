@@ -188,5 +188,8 @@ return {
         build = function()
             vim.cmd [[silent! GoInstallDeps]]
         end,
+        keys = {
+            { "<leader>ge", "<cmd>GoIfErr<cr>", desc = "Go if err" },
+        },
     },
 }
