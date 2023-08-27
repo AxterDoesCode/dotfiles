@@ -22,7 +22,7 @@ return {
         dependencies = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' }, -- Required
-            {                          -- Optional
+            {                            -- Optional
                 'williamboman/mason.nvim',
                 cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUninstall", "MasonUninstallAll", "MasonLog" },
                 build = ":MasonUpdate",
@@ -33,9 +33,9 @@ return {
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },   -- Required
+            { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' },   -- Required
+            { 'L3MON4D3/LuaSnip' },     -- Required
         },
         config = function()
             require("plugins.configs.lsp-zero")
@@ -47,16 +47,30 @@ return {
         -- or                              , branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' },
         keys = {
-            { "<leader>pf", "<cmd>Telescope find_files<cr>",                                                               desc =
-            "Find files" },
-            { "<C-p>",      "<cmd>Telescope git_files<cr>",                                                                desc =
-            "Git files" },
-            { "<leader>ps",
-                                function() require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") }) end,
-                                                                                                                               desc =
-                "Grep string" },
-            { "<leader>vh", "<cmd>Telescope help_tags<cr>",                                                                desc =
-            "Vim help tags" },
+            {
+                "<leader>pf",
+                "<cmd>Telescope find_files<cr>",
+                desc =
+                "Find files"
+            },
+            {
+                "<C-p>",
+                "<cmd>Telescope git_files<cr>",
+                desc =
+                "Git files"
+            },
+            {
+                "<leader>ps",
+                function() require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") }) end,
+                desc =
+                "Grep string"
+            },
+            {
+                "<leader>vh",
+                "<cmd>Telescope help_tags<cr>",
+                desc =
+                "Vim help tags"
+            },
         }
     },
     {
@@ -79,7 +93,7 @@ return {
             }
         end,
         keys = {
-            { "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", silent = true, noremap = true },
+            { "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", desc = "Trouble Quickfix", silent = true, noremap = true },
         }
     },
     {
