@@ -49,7 +49,7 @@ return {
         keys = {
             {
                 "<leader>pf",
-                "<cmd>Telescope find_files<cr>",
+                function() require("telescope.builtin").find_files() end,
                 desc =
                 "Find files"
             },
@@ -93,7 +93,7 @@ return {
             }
         end,
         keys = {
-            { "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", desc = "Trouble Quickfix", silent = true, noremap = true },
+            { "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", desc = "Toggle trouble qf", silent = true, noremap = true },
         }
     },
     {
