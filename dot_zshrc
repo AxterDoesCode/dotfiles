@@ -10,8 +10,16 @@ export PATH=$PATH:$(go env GOPATH)/bin
 export PATH=$PATH:"$HOME/.cargo/bin"
 # Path to Mason LSPs
 export PATH=$PATH:"$HOME/.local/share/nvim/mason/bin"
+export PATH=$PATH:"$HOME/xda/platform-tools/"
+
+export PATH=$PATH:/opt/tools/bsc/latest/bin
+
+# Path to local bin
+export PATH=$PATH:"$HOME/bin"
 
 export PATH
+
+source /tools/Xilinx/Vivado/2024.2/settings64.sh
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -115,3 +123,10 @@ eval $(keychain --eval --quiet id_ed25519)
 
 export NVM_DIR="/home/axtr/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[ -f "/home/axtr/.ghcup/env" ] && source "/home/axtr/.ghcup/env" # ghcup-env
+
+# opam configuration
+[[ ! -r /home/axtr/.opam/opam-init/init.zsh ]] || source /home/axtr/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
